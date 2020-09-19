@@ -1,0 +1,10 @@
+{{!-- Check 09-DayPlanner for details --}}
+
+{{!-- Initally just display the burgers from the database --}}
+<h1>All Burgers</h1>
+
+<div>
+{{#each burgers }}
+  <p>{{id}}  {{burger_name}}   {{devoured}}</p>
+{{/each}}
+</div>
