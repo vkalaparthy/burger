@@ -1,3 +1,48 @@
 body {
-    background: bisque;
+    background: rgb(218, 108, 19);
+    font-size: large;
+    font-weight: bold;
+}
+h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+h2 {
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+}
+.col_left {
+    margin-left: 20%;
+    /* text-align: center; */
+    width: 50%;
+    float: left;
+}
+.col_right {
+    margin-left: 20%;
+    width: 50%;
+    float: right;
+}
+.boxed {
+    border: 1px solid white ;
+    background-color: white;
+    width: 300px
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+form {
+    text-align: center;
+}
+button {
+    margin: 5px;
 }

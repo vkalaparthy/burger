@@ -6,7 +6,12 @@ const burger = {
     orm.all("burgers", function(res) {
       cb(res);
     });
-  }
+  },
+  update: function(col_value, condition, cb) {
+    orm.update("burgers", col_value, condition, function(res) {
+        cb(res);
+      });
+    },
 };
 
 // Export the database functions for the controller (burgers_controller.js).
