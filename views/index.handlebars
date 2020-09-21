@@ -64,9 +64,14 @@
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
+    if ($("#bur").val().trim() == "") {
+      return;
+    }
     var newBurger = {
       burger_name: $("#bur").val().trim(),
     };
+
+    
 
   console.log(newBurger);
     // Send the POST request.
