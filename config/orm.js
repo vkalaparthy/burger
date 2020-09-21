@@ -12,8 +12,8 @@ var orm = {
         cb(result);
       });
     },
-    update: function(table, col_value, condition, cb) {
-        var queryString = "UPDATE " + table;
+    update: function(tableInput, col_value, condition, cb) {
+        var queryString = "UPDATE " + tableInput;
 
         queryString += " SET";
         queryString += col_value;
@@ -22,12 +22,23 @@ var orm = {
 
         console.log(queryString);
         connection.query(queryString, function(err, result) {
-        if (err) {
-            return res.status(500).end();
-        }
+            if (err) {
+                return res.status(500).end();
+            }
 
-        cb(result);
+            cb(result);
         });
+    },
+    create: function(tableInput, col, value, cb) {
+        let queryString = "INSERT INTO " + tableInput + " (";
+        queryString += col + ", devoured) VALUES " +  "(?, false)";
+        const query = connection.query(queryString, [value], (err, result) => {
+            if (err) {
+                return res.status(500).end();
+            }
+            //console.log(query.sql);
+            cb(result);
+        })
     }
 };
 

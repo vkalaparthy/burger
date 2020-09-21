@@ -10,8 +10,13 @@ const burger = {
   update: function(col_value, condition, cb) {
     orm.update("burgers", col_value, condition, function(res) {
         cb(res);
-      });
-    },
+    });
+  },
+  create: function(col, value, cb) {
+    orm.create("burgers", col, value, function(res) {
+      cb(res);
+    })
+  }
 };
 
 // Export the database functions for the controller (burgers_controller.js).

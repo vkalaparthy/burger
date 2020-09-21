@@ -4,40 +4,41 @@
 <h1>Burger Bonanza!</h1>
 
 <div class="row">
-    {{#each burgers}}
+    <div class="col_left">
+      {{#each burgers}}
         {{#unless devoured}}
-            <div class="col_left">
-                <div>
-                    {{id}}
-                    {{burger_name}}
-                    <button class="eat-burger" data-id="{{this.id}}">DEVOUR!</button>
-                </div>
+            <div>
+                {{id}}. {{burger_name}}
+                <button class="eat-burger" data-id="{{this.id}}">Devour it!</button>
             </div>
         {{/unless}}
+      {{/each}}
+    </div>
+    <div class="col_right">
+      {{#each burgers}}
         {{#if devoured}}
-            <div class="col_right">
-                <div class="boxed">
-                    {{id}}
-                    {{burger_name}}
-                </div>
+            <div class="boxed">
+                {{id}}. {{burger_name}}
             </div>
         {{/if}}
-    {{/each}}
-    
+      {{/each}}
+    </div>   
 </div>
-
-
-{{!-- <h2>Add a Burger</h2>
+<br>
+<br>
+<hr>
+<h2>Add a Burger</h2>
 <form class="create-form">
 
   <div class="form-group">
     <label for="bur">Burger Name:</label>
-    <input type="text" id="burger" name="name">
+    <input type="text" id="bur" name="name">
   </div>
 
-  <button type="submit">Add Burger</button>
-</form> --}}
+  <button class="submit_btn" type="submit">Submit</button>
+</form>
 
+{{!-- Scripts here - they can be moved to a different file under public/assets --}}
 <script type="text/javascript">
   $(".eat-burger").on("click", function(event) {
     const id = $(this).data("id");
@@ -53,6 +54,28 @@
     }).then(
       function() {
         console.log("changed devoured to", newState);
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+
+  $(".create-form").on("submit", function(event) {
+    // Make sure to preventDefault on a submit event.
+    event.preventDefault();
+
+    var newBurger = {
+      burger_name: $("#bur").val().trim(),
+    };
+
+  console.log(newBurger);
+    // Send the POST request.
+    $.ajax("/api/burgers", {
+      type: "POST",
+      data: newBurger
+    }).then(
+      function() {
+        console.log("created new burger");
         // Reload the page to get the updated list
         location.reload();
       }
