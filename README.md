@@ -24,6 +24,9 @@ If you click on the "Devour it" button, the devoued Burgers move to the right si
 
 ![screenshot1](./public/assets/img/Capture2.JPG)
 
+Demo:
+
+![burgerDemo](./public/assets/img/MVC With Yummy Burgers!.gif)
 
 ## License
 
