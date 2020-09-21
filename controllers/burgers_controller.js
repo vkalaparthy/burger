@@ -11,7 +11,7 @@ router.get("/", function(req, res) {
     const hbsObject = { // create a handlebars oject that needs to be processed for view
       burgers: data
     };
-    console.log(hbsObject);
+    //console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
@@ -20,8 +20,8 @@ router.put("/api/burgers/:id", (req, res) => {
     const condition = " id = " + req.params.id;
     const chnageCol_value = " devoured = " + req.body.devoured;
     
-    console.log("condition", condition);
-    console.log(chnageCol_value);
+    //console.log("condition", condition);
+    //console.log(chnageCol_value);
 
     myBurger.update(chnageCol_value, condition, function(result) {
         if (result.changedRows == 0) {
