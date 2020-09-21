@@ -11,7 +11,7 @@ This Application builds a html file using the information provided by user
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
-This application is deployed in Heroku at https://burgerstodevour.herokuapp.com/. Repository at GitHub is at . For this application, schema.sql & seed.sql is provided to explain the schema and table used.  Anyone can clone this application from GitHub and install all the necessary packages from npm, as provided in package.json
+This application is deployed at [Heroku](https://burgerstodevour.herokuapp.com/). For this application, schema.sql & seed.sql is provided to explain the schema and table used.  Anyone can clone this application from GitHub and install all the necessary packages from npm, as provided in package.json
 
 ## Usage
 Create the database and tables and fill in the rows, schema.sql and seed.sql have been provided. Install the required mysql, express & express-handlebars NPM packages. In the terminal run the command "nodemon server.js". Open the application in user browser at localhost and provide the port number as specified in server.js file.
@@ -26,7 +26,7 @@ If you click on the "Devour it" button, the devoued Burgers move to the right si
 
 Demo:
 
-![burgerDemo](./public/assets/img/MVC With Yumm)
+![burgerDemo](./public/assets/img/MVC-With-Yummy-Burgers!.gif)
 
 ## License
 
