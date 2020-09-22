@@ -24,8 +24,6 @@
       {{/each}}
     </div>   
 </div>
-<br>
-<br>
 <hr>
 <h2>Add a Burger</h2>
 <form class="create-form">
@@ -71,20 +69,18 @@
       burger_name: $("#bur").val().trim(),
     };
 
-    
-
-  console.log(newBurger);
-    // Send the POST request.
-    $.ajax("/api/burgers", {
-      type: "POST",
-      data: newBurger
-    }).then(
-      function() {
-        console.log("created new burger");
-        // Reload the page to get the updated list
-        location.reload();
-      }
-    );
+    console.log(newBurger);
+      // Send the POST request.
+      $.ajax("/api/burgers", {
+        type: "POST",
+        data: newBurger
+      }).then(
+        function() {
+          console.log("created new burger");
+          // Reload the page to get the updated list
+          location.reload();
+        }
+      );
   });
 
 </script>

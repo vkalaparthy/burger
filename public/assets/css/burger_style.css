@@ -34,12 +34,13 @@ h2 {
     padding: 5px;
     border: 1px solid rgb(218, 108, 19) ;
     background-color: white;
-    width: 280px
+    width: 300px
 }
 .row::after {
     content: "";
     clear: both;
     display: table;
+    margin-bottom: 40px;
 }
 form {
     text-align: center;
@@ -57,5 +58,8 @@ button {
 @media only screen and (max-width: 768px) {
     .col_left {
         margin-left: 5%;
+    }
+    .boxed {
+        width: 200px;
     }
 }
