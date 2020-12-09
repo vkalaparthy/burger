@@ -8,10 +8,7 @@ This is a burger logger with MySQL, Node, Express, Handlebars and handmade ORM. 
 * [Installation](#installation)
 * [How to Use](#usage)
 * [Application Demo](#application-demo)
-* [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
+* [Contact](#contact)
 
 ## General Info
 A fun application that runs in a browser or mobile to create and devour the burgers of your choice.
@@ -42,12 +39,8 @@ If you click on the **Devour it!** button, the devoued Burgers move to the right
 
 ![burgerDemo](./public/assets/img/MVC-With-Yummy-Burgers!.gif)
 
-## License
 
-## Contributing
-## Tests
-
-## Questions
+## Contact
 * Vani Kalaparthy
   * https://github.com/vkalaparthy
   * kalaparthy.vani@gmail.com
