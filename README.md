@@ -1,6 +1,5 @@
 # burger
 Create your own burgers and eat them too...
-This is a burger logger with MySQL, Node, Express, Handlebars and handmade ORM. used MVC design pattern to break the application into 3 parts.
 
 ## Table of Contents
 * [General Info](#general-info)
