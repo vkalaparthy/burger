@@ -5,7 +5,7 @@ Create your own burgers and eat them too...
 * [General Info](#general-info)
 * [Technologies](#technologies)
 * [Installation](#installation)
-* [How to Use](#usage)
+* [How to Use](#how-to-use)
 * [Application Demo](#application-demo)
 * [Contact](#contact)
 
